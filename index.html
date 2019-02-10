@@ -14,16 +14,16 @@
         </a>
         <ul class="main-menu">
           <li>
-            <a href="info.html">Информация</a>
+            <a href="info.html" alt="Информация">Информация</a>
           </li>
           <li>
-            <a href="photo-video.html">Фото и видео</a>
+            <a href="photo-video.html" alt="Фото и видео">Фото и видео</a>
           </li>
           <li>
-            <a href="state-map.html">Карта штата</a>
+            <a href="state-map.html" alt="Карта штата">Карта штата</a>
           </li>
           <li>
-            <a href="hotels.html">Гостиницы</a>
+            <a href="hotels.html" alt="Гостиницы">Гостиницы</a>
           </li>
         </ul>
       </nav>
@@ -97,8 +97,48 @@
       <section class="search-hotels">
         <h3>Заинтересовались?</h3>
         <p>Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Cедоне</p>
-        <a class="search-btn">Поиск гостиницы в Cедоне</a>
-           <!--здесь будет форма-->
+        <div class="search-form-container">
+          <a class="search-btn">Поиск гостиницы в Седоне</a>
+          <form class="search-form" action="https://echo.htmlacademy.ru" method="post">
+            <div class="form-line clearfix">
+              <label for="income">Дата заезда:</label>
+              <input class="date" type="text" id="income" name="in" placeholder="24 апреля 2017" required>
+              <div class="calendar"></div>
+            </div>
+            <div class="form-line clearfix">
+              <label for="outcome">Дата выезда:</label>
+              <input class="date" type="text" id="outcome" name="out" placeholder="4 июля 2017">
+              <div class="calendar"></div>
+            </div>
+            <div class="form-line clearfix">
+              <div class="half-width">
+                <label for="adult">Взрослые:</label>
+                <div class="human-container">
+                  <button class="btn minus-btn" type="button">
+                    <span class="minus">-</span>
+                  </button>
+                  <input class="unit field" type="text" name="adults" id="adult" value="2" data-step="1">
+                  <button class="btn plus-btn" type="button">
+                    <span class="plus">+</span>
+                  </button>
+                </div>
+              </div>
+              <div class="half-width">
+                <label for="children">Дети:</label>
+                <div class="human-container">
+                  <button class="btn minus-btn" type="button">
+                    <span class="minus">-</span>
+                  </button>
+                  <input class="unit field" type="text" name="child" id="children" value="0" data-step="1">
+                  <button class="btn plus-btn" type="button">
+                    <span class="plus">+</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <button class="find-btn" type="button"><span>Найти</span></button>
+          </form>
+        </div>
       </section>
       <section class="map">
         <h2>Карта Седоны</h2>
@@ -110,12 +150,12 @@
         <a href="#">#visitsedona</a>
       </p>
       <ul>
-        <li><a class="social-button" href="#">Twitter</a></li>
-        <li><a class="social-button" href="#">Facebook</a></li>
-        <li><a class="social-button" href="#">Youtube</a></li>
+        <li><a class="social-button" href="#" alt="Посети Седону в Twitter">Twitter</a></li>
+        <li><a class="social-button" href="#" alt="Посети Седону в Facebook">Facebook</a></li>
+        <li><a class="social-button" href="#" alt="Посети Седону в Youtube">Youtube</a></li>
       </ul>
       <p class="footer-copyright">Website by:
-        <a class="button" href="https://htmlacademy.ru">HTML Academy</a>
+        <a class="button" href="https://htmlacademy.ru" alt="Сделано в HTML Academy">HTML Academy</a>
       </p>
     </footer>
   </body>
