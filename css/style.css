@@ -79,7 +79,13 @@ p {
   color: #000000;
   font-weight: bold;
 }
+/* форма */
+.search-form-container {
+  position: relative
+}
 .search-btn {
+  margin-top: 35px
+  margin-left: 140px
   font: inherit;
   font-size: 21px;
   text-align: center;
@@ -87,14 +93,23 @@ p {
   background-color: #766357;
   border: none;
   text-transform: uppercase;
+  width: 568px;
 }
 .search-btn:hover,
 .search-btn:focus {
   background-color: #604e43;
 }
 .search-btn:active {
-  color: #857871;
+  color: rgba(255, 255, 255, 0.3);
   background-color: #503e33;
+}
+.search-form {
+  position: absolute;
+  width: 568px;
+  background-color: #ffffff;
+  box-shadow: 7px 7px 15px rgba(0,1,1,0.15);
+  left: 50%;
+  transform: translateX(-300px);
 }
 .date {
   line-height: 26px;
@@ -126,6 +141,16 @@ p {
   text-align: left;
   text-transform: uppercase;
 }
+.search-form input {
+  line-height: 26px;
+  font-size: 14px;
+  color: #000000;
+  font-weight: bold;
+  text-align: left;
+  text-transform: uppercase;
+  background-color: #f2f2f2;
+  border: none;
+}
 .calendar {
   margin: 0 auto;
   font: inherit;
@@ -134,7 +159,7 @@ p {
   font-size: 0;
   display: block;
   background-position: center;
-  background-image: url("../img/calendar.svg");
+  background-image: url("../img/calendar1.svg");
   background-repeat: no-repeat;
   background-color: #f2f2f2;
 }
@@ -213,6 +238,66 @@ p {
   background-color: #669ec0;
 }
 .find-btn:active {
-  color: #88b6d1;
+  color: rgba(255, 255, 255, 0.3);
   background-color: #5496bd;
+}
+/*футер*/
+.sedona-hashtag {
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: 700;
+  color: #000000;
+  text-decoration: none;
+}
+.social-button {
+  width: 46px;
+  height: 48px;
+  background-color: #81b3d2;
+  background-repeat: no-repeat;
+  list-style: none;
+}
+.social-button-tw {
+  background-image: url("../img/swtwitter.svg");
+}
+.social-button-tw:hover,
+.social-button-tw:focus {
+  background-color: #669ec0;
+}
+.social-button-tw:active {
+  background-color: #5496bd;
+}
+.social-button-fb {
+  background-image: url("../img/swfb.svg");
+}
+.social-button-fb:hover,
+.social-button-fb:focus {
+  background-color: #669ec0;
+}
+.social-button-fb:active {
+  background-color: #5496bd;
+}
+.social-button-you {
+  background-image: url("../img/swyoutube.svg");
+}
+.social-button-you:hover,
+.social-button-you:focus {
+  background-color: #669ec0;
+}
+.social-button-you:active {
+  background-color: #5496bd;
+}
+.footer-copyright {
+  background-image: url("../img/logo-htmlacademy.svg")
+}
+.button-copyright {
+  width: 115px;
+  height: 41px;
+  fill: #231f20;
+}
+.button-copyright:hover,
+.button-copyright:focus {
+  fill: #81b3d2;
+}
+.button-copyright {
+  fill: #bdbbbc;
 }
