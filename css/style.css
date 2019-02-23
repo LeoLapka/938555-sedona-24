@@ -40,12 +40,27 @@ a {
 .main-menu-link.current {
   color: #766357
 }
-/*.visually-hidden {
-}*/
 .welcome-graphics {
   min-height: 510px;
   width: 100%;
   background-image: url("../img/backgroundphoto.jpg");
+}
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 .advantages-h-black {
   font-size: 21px;
@@ -159,7 +174,7 @@ p {
   font-size: 0;
   display: block;
   background-position: center;
-  background-image: url("../img/calendar1.svg");
+  background-image: url("../img/calendar.svg");
   background-repeat: no-repeat;
   background-color: #f2f2f2;
 }
@@ -169,6 +184,7 @@ p {
 }
 .calendar:active {
   background-color: #81b3d2;
+
 }
 .date:hover,
 .date:focus {
@@ -240,6 +256,43 @@ p {
 .find-btn:active {
   color: rgba(255, 255, 255, 0.3);
   background-color: #5496bd;
+}
+/*Список гостиниц*/
+.result {
+    border-bottom: 1px solid #e5e5e5;
+    display: flex;
+}
+.rating-result {
+  margin-left: auto;
+}
+.rating-result-numb {
+  color: #666666;
+  background-color: #f2f2f2;
+  padding: 4px 12px 5px 15px
+}
+.star {
+  background-image: url("../img/star.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  display: block;
+  width: 18px;
+  height: 17px;
+}
+.hotel-photo {
+  padding: 30px 20px 25px 75px;
+}
+.name-hotel {
+  font-size: 21px;
+  line-height: 26px;
+  color: #ffffff;
+  font-weight: bold;
+}
+.name-hotel:hover,
+.name-hotel:focus {
+  color: #81b3d2
+}
+.name-hotel:active {
+  color: #b2b2b2
 }
 /*футер*/
 .sedona-hashtag {
