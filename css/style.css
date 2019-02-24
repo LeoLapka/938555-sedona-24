@@ -279,19 +279,21 @@ p {
   height: 17px;
 }
 .hotel-photo {
-  padding: 30px 20px 25px 75px;
+  padding: 30px 30px 25px 75px;
 }
-.name-hotel {
+.name-hotel a{
+  margin-top: 25px;
+  margin-bottom: 6px;
   font-size: 21px;
   line-height: 26px;
-  color: #ffffff;
+  color: #000000;
   font-weight: bold;
 }
-.name-hotel:hover,
-.name-hotel:focus {
+.name-hotel a:hover,
+.name-hotel a:focus {
   color: #81b3d2
 }
-.name-hotel:active {
+.name-hotel a:active {
   color: #b2b2b2
 }
 /*футер*/
