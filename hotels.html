@@ -1,40 +1,141 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-  <meta charset="utf-8">
-  <title>HTML Academy: Седона</title>
-  <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&subset=latin,cyrillic" rel="stylesheet">
-  <link href="css/normalize.css" rel="stylesheet">
-  <link href="css/style.css" rel="stylesheet">
-  <meta name="description" content="Здесь будет дескрип">
-  <meta name="keywords" content="Здесь будут ключи">
-</head>
-<body>
-  <header class="container header">
-    <nav class="main-navigation">
-      <a class="main-header-logo" href="index.html">
-        <img src="img/logo-sedona.svg" width="140" height="71" alt="Седона логотип">
-      </a>
-      <ul class="main-menu">
-        <li class="main-menu-left">
-          <a href="info.html" class="main-menu-link" title="Информация">Информация</a>
-        </li>
-        <li class="main-menu-left">
-          <a href="photo-video.html" class="main-menu-link" title="Фото и видео">Фото и видео</a>
-        </li>
-        <li class="main-menu-right">
-          <a href="state-map.html" class="main-menu-link" title="Карта штата">Карта штата</a>
-        </li>
-        <li class="main-menu-right">
-          <a href="hotels.html" class="main-menu-link" title="Гостиницы">Гостиницы</a>
-        </li>
-      </ul>
-    </nav>
-  </header>
-    <main class="container">
-      <h1 class="visually-hidden">Выберите гостиницу в Седоне</h1>
+  <head>
+    <meta charset="utf-8">
+    <title>HTML Academy: Седона</title>
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&subset=latin,cyrillic" rel="stylesheet">
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <meta name="description" content="Здесь будет дескрип">
+    <meta name="keywords" content="Здесь будут ключи">
+  </head>
+  <body class="container">
+    <header class="container-header">
+      <nav class="main-navigation">
+        <a class="main-header-logo" href="index.html">
+          <img src="img/logo-sedona.svg" width="140" height="71" alt="Седона логотип">
+        </a>
+        <ul class="main-menu">
+          <li class="main-menu-left">
+            <a href="info.html" class="main-menu-link" title="Информация">Информация</a>
+          </li>
+          <li class="main-menu-left">
+            <a href="photo-video.html" class="main-menu-link" title="Фото и видео">Фото и видео</a>
+          </li>
+          <li class="main-menu-right">
+            <a href="state-map.html" class="main-menu-link" title="Карта штата">Карта штата</a>
+          </li>
+          <li class="main-menu-right">
+            <a href="hotels.html" class="main-menu-link" title="Гостиницы">Гостиницы</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section class="hotels-choice">
+        <h1 class="visually-hidden">Поиск отелей в Седоне</h1>
+        <form class="filters" action="hotels.html" method="get">
+          <div class="filters-layout">
+            <div class="filters-options">
+              <fieldset class="filters-fieldset">
+                <legend class="filters-legend">Инфраструктура:</legend>
+                <ul class="filters-list">
+                  <li class="filters-item">
+                    <input class="filters-checkbox" type="checkbox" name="pool" id="pool" checked>
+                    <label class="filters-checkbox-label" for="pool">Бассейн</label>
+                  </li>
+                  <li class="filters-item">
+                    <input class="filters-checkbox" type="checkbox" name="parking" id="parking">
+                    <label class="filters-checkbox-label" for="parking">Парковка</label>
+                  </li>
+                  <li class="filters-item">
+                    <input class="filters-checkbox" type="checkbox" name="wi-fi" id="wi-fi">
+                    <label class="filters-checkbox-label" for="wi-fi">WI-FI</label>
+                  </li>
+                </ul>
+              </fieldset>
+            </div>
+            <div class="filters-options">
+              <fieldset class="filters-fieldset">
+                <legend class="filters-legend">Тип жилья:</legend>
+                <ul class="filters-list">
+                  <li class="filters-item">
+                    <input class="filters-checkbox" type="checkbox" name="hotel" id="hotel" checked>
+                    <label class="filters-checkbox-label" for="hotel">Гостиница</label>
+                  </li>
+                  <li class="filters-item">
+                    <input class="filters-checkbox" type="checkbox" name="motel" id="motel" checked>
+                      <label class="filters-checkbox-label" for="motel">Мотель</label>
+                  </li>
+                  <li class="filters__item">
+                    <input class="filters-checkbox" type="checkbox" name="apartments" id="apartments" checked>
+                    <label class="filters-checkbox-label" for="apartments">Апартаменты</label>
+                  </li>
+                </ul>
+              </fieldset>
+            </div>
+            <div class="filters-price">
+              <fieldset class="filters-price-fieldset">
+                <legend class="filters-price-legend">Стоимость в сутки (p):</legend>
+                <div class="filters-price-inputs">
+                  <label class="filters-price-label filters-price-input-min">
+                    От <input class="filters-price-input  filters-price-input-min" type="text" name="min-price-input" value="0">
+                  </label>
+                  <label class="filters-price-label filters-price-label-max">
+                        До <input class="filters-price-input filters-price-input-max" type="text" name="max-price-input" value="3000">
+                  </label>
+                </div>
+                <div class="filters-price-range">
+                  <div class="filters-price-scale">
+                    <div class="filters-price-scale-value"></div>
+                  </div>
+                  <span class="filters-price-control  filters-price-control-min" tabindex="0">Минимум</span>
+                  <span class="filters-price-control  filters-price-control-max" tabindex="0">Максимум</span>
+                </div>
+              </fieldset>
+              <div class="filters-apply">
+                <button class="filters-show  filter-btn" type="submit" name="search-show">Показать</button>
+              </div>
+            </div>
+          </div>
+        </form>
+      </section>
       <section class="results">
         <h2 class="visually-hidden">Найденные гостиницы в Седоне</h2>
+        <section class="results-sort">
+          <div class="results-sort-title">
+            <h3 class="visually-hidden">Сортировка результатов</h3>
+            <div class="results-sort-result-title">Найдено:
+              <span class="results-sort-result-count" id="hotels-count">3</span>
+            </div>
+          </div>
+          <div class="results-sort-types">
+            <ul class="results-sort-list">
+              <li class="results-sort-list-title">
+                Сортировка:
+              </li>
+              <li class="results-sort-item">
+                <a class="results-sort-link  results-sort-link-active" href="#">По цене</a>
+              </li>
+              <li class="results-sort-item">
+                <a class="results-sort-link" href="#">По типу</a>
+              </li>
+              <li class="results-sort-item">
+                <a class="results-sort-link" href="#">По рейтингу</a>
+              </li>
+            </ul>
+          </div>
+          <div class="results-updown">
+            <ul class="results-updown-list">
+              <li class="results-updown-item">
+                <a class="results-updown-link results-updown-link-up" href="#">По возрастанию</a>
+              </li>
+              <li class="results-updown-item">
+                <a class="results-updown-link results-updown-link-down results-updown-link-active" href="#">По убыванию</a>
+              </li>
+            </ul>
+          </div>
+        </section>
         <article class="result">
           <div class="hotel-photo">
             <img src="img/amara.jpg" width="135" height="90" alt="Отель Amara resort & spa">
@@ -109,7 +210,7 @@
         </article>
       </section>
     </main>
-    <footer class="container">
+    <footer>
       <p class="sedona-hashtag" title="Наш хэштег">#visitsedona</p>
       <ul class="social-buttons">
         <li class="social-button">
