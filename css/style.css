@@ -545,6 +545,9 @@ p {
 .map-container {
     background-image: url("../img/map.png");
 }
+.map-container iframe {
+  border: 0;
+}
 /*футер*/
 .footer-index {
   position: absolute;
